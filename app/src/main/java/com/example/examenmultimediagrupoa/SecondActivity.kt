@@ -48,7 +48,7 @@ class SecondActivity : AppCompatActivity()  {
     }
 
     private fun filtrarPorTamano(texto: String, valorFiltrado : Int) : String{
-        val lista = texto.split(" ")
+        val lista = texto.split(" ")   //Aparecen solo los elementos que tienen dicha o mayor longitud a la que se añade en el edittext   valorFiltrado, int
         val listaFiltrada = lista.filter {
             it.length >= valorFiltrado
         }
@@ -60,7 +60,7 @@ class SecondActivity : AppCompatActivity()  {
         return salida
     }
 
-    private fun ordenarPorTamano(texto: String) : String{
+    private fun ordenarPorTamano(texto: String) : String{   //Palabra mas larga primero
         val lista = texto.split(" ")
         val listaOrdenada = lista.sortedByDescending {
             it.length
@@ -77,7 +77,7 @@ class SecondActivity : AppCompatActivity()  {
         val lista = texto.split(" ")
         var salida = ""
         lista.forEach {
-            salida += it + " " + it.length + "\n"
+            salida += it + " " + it.length + "\n"  //captura la palabra separada por espacio y le añade su longitud a la palabra al final  Hola 4  Adios 5
         }
         return salida
     }

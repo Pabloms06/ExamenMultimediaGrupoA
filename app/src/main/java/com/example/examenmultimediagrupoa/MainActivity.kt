@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {
 
                 s?.let {
-                    button.isEnabled = it.split(" ").size >= 4
+                    button.isEnabled = it.split(" ").size >= 4  //Separado por espacios
                 }
 
             }
